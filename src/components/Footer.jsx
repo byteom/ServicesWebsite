@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 const Footer = () => {
   const [showScroll, setShowScroll] = useState(false);
 
-  // Show scroll to top button when scrolled down
+  // Show scroll-to-top button when scrolled down
   useEffect(() => {
     const handleScroll = () => {
       setShowScroll(window.scrollY > 200);
@@ -20,7 +20,7 @@ const Footer = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Scroll to top function
+  // Scroll-to-top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative overflow-hidden text-white bg-gray-900 p-12"> {/* Darker background color */}
+    <footer className="relative overflow-hidden text-white bg-gray-900 p-6 md:p-12">
       {/* Glassmorphism Background Effect */}
       <div className="absolute inset-0 bg-white/10 backdrop-blur-lg rounded-lg -z-10"></div>
 
@@ -37,17 +37,17 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 via-red-500 to-purple-500"></div>
 
       {/* Footer Content */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
         {/* Column 1: Newsletter Subscription */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-bold">Subscribe to our Newsletter</h3>
-          <p>Stay updated with our latest news and services.</p>
-          <form className="flex space-x-4">
+          <h3 className="text-xl md:text-2xl font-bold">Subscribe to our Newsletter</h3>
+          <p className="text-sm md:text-base">Stay updated with our latest news and services.</p>
+          <form className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
             <input
               type="email"
               placeholder="Enter your email"
               className="p-3 w-full bg-white/20 backdrop-blur-lg text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"
+              required
             />
             <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg hover:scale-105 transform transition-all shadow-md">
               Subscribe
@@ -57,7 +57,7 @@ const Footer = () => {
 
         {/* Column 2: Quick Links */}
         <div className="space-y-4">
-          <h3 className="text-2xl font-bold">Quick Links</h3>
+          <h3 className="text-xl md:text-2xl font-bold">Quick Links</h3>
           <ul className="space-y-2">
             <li>
               <a href="#about" className="hover:underline hover:text-yellow-300 transition">
@@ -84,7 +84,7 @@ const Footer = () => {
 
         {/* Column 3: Social Media Icons */}
         <div className="space-y-4 text-center md:text-left">
-          <h3 className="text-2xl font-bold">Follow Us</h3>
+          <h3 className="text-xl md:text-2xl font-bold">Follow Us</h3>
           <div className="flex space-x-6 justify-center md:justify-start text-lg">
             <a
               href="https://facebook.com"

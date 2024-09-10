@@ -11,15 +11,15 @@ const BookingForm = ({ service, closeForm, handleSubmit }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-96 relative">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4 md:p-0">
+      <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg w-full max-w-md relative">
         <button
           onClick={closeForm}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-lg md:text-xl"
         >
           ✕
         </button>
-        <h2 className="text-2xl font-bold mb-4">Book {service.name}</h2>
+        <h2 className="text-xl md:text-2xl font-bold mb-4 text-center">Book {service.name}</h2>
         <form onSubmit={handleBooking}>
           <div className="mb-4">
             <label className="block text-sm font-semibold text-gray-700">Name</label>

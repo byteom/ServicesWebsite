@@ -54,7 +54,7 @@ const BookingDetails = () => {
 
   return (
     <motion.section 
-      className="p-16 relative overflow-hidden" 
+      className="p-6 md:p-16 relative overflow-hidden" 
       initial={{ opacity: 0, y: 50 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -62,20 +62,20 @@ const BookingDetails = () => {
       {/* Background animation */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-500 via-purple-600 to-pink-600 opacity-20 transform -skew-y-3"></div>
 
-      <h2 className="text-5xl font-extrabold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600">
+      <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-6 md:mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-600">
         Booking Details
       </h2>
       
       <div className="container mx-auto z-10 relative">
         <motion.div
-          className="bg-white shadow-2xl p-10 rounded-3xl"
+          className="bg-white shadow-2xl p-6 md:p-10 rounded-3xl"
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           {/* Service Info */}
           <motion.h3 
-            className="text-3xl font-bold mb-6"
+            className="text-2xl md:text-3xl font-bold mb-4 md:mb-6"
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
@@ -83,7 +83,7 @@ const BookingDetails = () => {
             Service: {booking.serviceName}
           </motion.h3>
           <motion.p 
-            className="text-lg mb-4" 
+            className="text-base md:text-lg mb-4" 
             initial={{ opacity: 0, x: -50 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ delay: 0.3 }}
@@ -91,7 +91,7 @@ const BookingDetails = () => {
             <strong>ID:</strong> {booking.id}
           </motion.p>
           <motion.p 
-            className="text-lg mb-4"
+            className="text-base md:text-lg mb-4"
             initial={{ opacity: 0, x: -50 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ delay: 0.4 }}
@@ -99,7 +99,7 @@ const BookingDetails = () => {
             <strong>Name:</strong> {booking.name}
           </motion.p>
           <motion.p 
-            className="text-lg mb-4"
+            className="text-base md:text-lg mb-4"
             initial={{ opacity: 0, x: -50 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ delay: 0.5 }}
@@ -107,7 +107,7 @@ const BookingDetails = () => {
             <strong>Email:</strong> {booking.email}
           </motion.p>
           <motion.p 
-            className="text-lg mb-4"
+            className="text-base md:text-lg mb-4"
             initial={{ opacity: 0, x: -50 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ delay: 0.6 }}
@@ -115,7 +115,7 @@ const BookingDetails = () => {
             <strong>Phone:</strong> {booking.phone}
           </motion.p>
           <motion.p 
-            className="text-lg mb-4"
+            className="text-base md:text-lg mb-4"
             initial={{ opacity: 0, x: -50 }} 
             animate={{ opacity: 1, x: 0 }} 
             transition={{ delay: 0.7 }}
@@ -125,7 +125,7 @@ const BookingDetails = () => {
 
           {/* Progress Bar */}
           <div className="relative pt-4">
-            <div className="overflow-hidden h-4 mb-4 text-xs flex rounded bg-gray-200">
+            <div className="overflow-hidden h-3 md:h-4 mb-4 text-xs flex rounded bg-gray-200">
               <div 
                 style={{ width: `${statusProgress[booking.status]}%` }} 
                 className={`flex flex-col text-center whitespace-nowrap text-white justify-center bg-green-500`}
@@ -139,8 +139,8 @@ const BookingDetails = () => {
             </div>
           </div>
 
-          <h4 className="text-2xl mt-6 mb-4 font-semibold">Status Path:</h4>
-          <ul className="list-disc ml-6">
+          <h4 className="text-xl md:text-2xl mt-6 mb-4 font-semibold">Status Path:</h4>
+          <ul className="list-disc ml-4 md:ml-6">
             {booking.history.map((status, index) => (
               <motion.li 
                 key={index} 
@@ -155,9 +155,9 @@ const BookingDetails = () => {
           </ul>
 
           {/* Status update buttons with advanced hover effects */}
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-6 md:mt-8 flex flex-col md:flex-row flex-wrap gap-4">
             <motion.button
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 relative overflow-hidden transition-transform transform hover:scale-105"
+              className="px-4 py-3 md:px-6 md:py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 relative overflow-hidden transition-transform transform hover:scale-105"
               onClick={() => updateStatus('Accepted')}
               disabled={booking.status !== 'Booked'}
               whileHover={{ scale: 1.1, rotate: 5 }}
@@ -174,7 +174,7 @@ const BookingDetails = () => {
             </motion.button>
 
             <motion.button
-              className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 relative overflow-hidden transition-transform transform hover:scale-105"
+              className="px-4 py-3 md:px-6 md:py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 relative overflow-hidden transition-transform transform hover:scale-105"
               onClick={() => updateStatus('Started Working')}
               disabled={booking.status !== 'Accepted'}
               whileHover={{ scale: 1.1, rotate: -5 }}
@@ -191,7 +191,7 @@ const BookingDetails = () => {
             </motion.button>
 
             <motion.button
-              className="px-6 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 relative overflow-hidden transition-transform transform hover:scale-105"
+              className="px-4 py-3 md:px-6 md:py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 relative overflow-hidden transition-transform transform hover:scale-105"
               onClick={() => updateStatus('Completed')}
               disabled={booking.status !== 'Started Working'}
               whileHover={{ scale: 1.1, rotate: 5 }}
@@ -208,7 +208,7 @@ const BookingDetails = () => {
             </motion.button>
 
             <motion.button
-              className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 relative overflow-hidden transition-transform transform hover:scale-105"
+              className="px-4 py-3 md:px-6 md:py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 relative overflow-hidden transition-transform transform hover:scale-105"
               onClick={() => navigate('/track-services')}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}

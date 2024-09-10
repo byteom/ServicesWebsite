@@ -41,7 +41,7 @@ function App() {
         </Routes>
         {/* Footer and ScrollToTop component */}
         <Footer />
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
       </div>
     </Router>
   );
