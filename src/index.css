@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);  /* Moves the slider halfway to ensure a smooth loop */
+    }
+  }
+  
+  .animate-scroll {
+    display: flex;
+    animation: scroll 10s linear infinite; /* Faster scrolling */
+  }
+  
