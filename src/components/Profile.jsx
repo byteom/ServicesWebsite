@@ -3,10 +3,10 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub, FaEdit } from 'react-ic
 
 const Profile = () => {
   const [profileImage, setProfileImage] = useState('https://via.placeholder.com/150'); // Default profile image
-  const [fullName, setFullName] = useState('John Doe'); // Example default full name
+  const [fullName, setFullName] = useState('Om Singh'); // Example default full name
   const [bio, setBio] = useState('A passionate developer.'); // Example default bio
-  const [email, setEmail] = useState('johndoe@example.com'); // Default email
-  const [location, setLocation] = useState('New York, USA'); // Default location
+  const [email, setEmail] = useState('om singh@example.com'); // Default email
+  const [location, setLocation] = useState('Jalandhar, Punjab'); // Default location
   const [socialLinks, setSocialLinks] = useState({
     facebook: '',
     twitter: '',
