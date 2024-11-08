@@ -114,8 +114,10 @@ In the project directory, you can run:
 - `npm run lint`: Runs ESLint to identify and fix code quality issues.
 - `npm run preview`: Serves the production build locally.
  
+
 ### **File Tree**
 
+```
 src
  ┣ assets
  ┃ ┣ images
@@ -144,3 +146,4 @@ src
  ┣ App.jsx
  ┣ index.css
  ┗ main.jsx
+```
