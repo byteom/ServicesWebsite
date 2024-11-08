@@ -114,3 +114,33 @@ In the project directory, you can run:
 - `npm run lint`: Runs ESLint to identify and fix code quality issues.
 - `npm run preview`: Serves the production build locally.
  
+### **File Tree**
+
+src
+ ┣ assets
+ ┃ ┣ images
+ ┃ ┃ ┣ App_1.jpg
+ ┃ ┃ ┗ webdevlopment _1.jpg
+ ┃ ┗ react.svg
+ ┣ components
+ ┃ ┣ Banner.jsx
+ ┃ ┣ BookingDetails.jsx
+ ┃ ┣ BookingForm.jsx
+ ┃ ┣ Contact.jsx
+ ┃ ┣ Footer.jsx
+ ┃ ┣ Hero.jsx
+ ┃ ┣ Navbar.jsx
+ ┃ ┣ NotificationBar.jsx
+ ┃ ┣ Profile.jsx
+ ┃ ┣ ScrollToTop.jsx
+ ┃ ┣ Services.jsx
+ ┃ ┣ ServiceSlider.jsx
+ ┃ ┣ Testimonials.jsx
+ ┃ ┗ TrackServices.jsx
+ ┣ modals
+ ┃ ┣ SignInModal.jsx
+ ┃ ┗ SignUpModal.jsx
+ ┣ App.css
+ ┣ App.jsx
+ ┣ index.css
+ ┗ main.jsx
