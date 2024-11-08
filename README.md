@@ -14,6 +14,7 @@ This is a responsive, modern services website built using **React** with **Vite*
 - [File Breakdown](#file-breakdown)
 - [Available Scripts](#available-scripts)
 - [Contact Information](#contact-information)
+- [File Tree](#file-tree)
 
 ---
 
